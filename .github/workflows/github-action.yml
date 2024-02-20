@@ -22,7 +22,7 @@ jobs:
 
       - name: Build Maven Projects
         run: |
-          mvn clean package  -f ./delivery/pom.xml -Dmaven.test.skip=true
+          mvn clean package  -f delivery/pom.xml -Dmaven.test.skip=true
           
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
