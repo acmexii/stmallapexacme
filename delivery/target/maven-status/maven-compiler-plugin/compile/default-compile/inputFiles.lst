@@ -1,8 +1,0 @@
-/workspaces/stmallapexacme/delivery/src/main/java/stmall/delivery/events/DeliveryCanceled.java
-/workspaces/stmallapexacme/delivery/src/main/java/stmall/delivery/domain/Delivery.java
-/workspaces/stmallapexacme/delivery/src/main/java/stmall/delivery/events/DeliveryCompleted.java
-/workspaces/stmallapexacme/delivery/src/main/java/stmall/delivery/events/DeliveryStarted.java
-/workspaces/stmallapexacme/delivery/src/main/java/stmall/delivery/domain/DeliveryRepository.java
-/workspaces/stmallapexacme/delivery/src/main/java/stmall/delivery/events/ProductCollected.java
-/workspaces/stmallapexacme/delivery/src/main/java/stmall/delivery/domain/DeliveryService.java
-/workspaces/stmallapexacme/delivery/src/main/java/stmall/delivery/DeliveryApplication.java

@@ -1,8 +1,0 @@
-stmall/delivery/events/DeliveryCompleted.class
-stmall/delivery/domain/Delivery.class
-stmall/delivery/events/DeliveryCanceled.class
-stmall/delivery/domain/DeliveryRepository.class
-stmall/delivery/domain/DeliveryService.class
-stmall/delivery/DeliveryApplication.class
-stmall/delivery/events/DeliveryStarted.class
-stmall/delivery/events/ProductCollected.class
