@@ -1,0 +1,27 @@
+// ... (previous code)
+
+import org.springframework.context.annotation.Bean;
+import java.util.function.Consumer;
+
+// ... (inside the DeliveryService class)
+
+@Bean
+public Consumer<DeliveryStarted> wheneverOrdered_StartDelivery() {
+    return deliveryStarted -> {
+        // Logic to handle the DeliveryStarted event
+    };
+}
+
+@Bean
+public Consumer<DeliveryCanceled> wheneverOrderCanceled_CancelDelivery() {
+    return deliveryCanceled -> {
+        // Logic to handle the DeliveryCanceled event
+    };
+}
+
+@Bean
+public Consumer<Object> discardFunction() {
+    return event -> {
+        // Logic to discard the event or handle unknown events
+    };
+}
