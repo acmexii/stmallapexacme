@@ -26,3 +26,37 @@ spring:
           contentType: application/json
       function:
         routing-expression: headers['type'] == 'Ordered' ? 'wheneverOrdered_StartDelivery' : (headers['type'] == 'OrderCanceled' ? 'wheneverOrderCanceled_CancelDelivery' : 'discardFunction')
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: docker
+  datasource:
+    url: jdbc:h2:mem:deliverydb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: my-kafka:9092
+      bindings:
+        functionRouter-in-0:
+          destination: stmall
+          group: delivery
+          contentType: application/json
+        producer-out-0:
+          destination: stmall
+          contentType: application/json
+      function:
+        routing-expression: headers['type'] == 'Ordered' ? 'wheneverOrdered_StartDelivery' : (headers['type'] == 'OrderCanceled' ? 'wheneverOrderCanceled_CancelDelivery' : 'discardFunction')
+
+server:
+  port: 8080        
